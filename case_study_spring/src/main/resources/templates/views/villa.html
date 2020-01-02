@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container text-center">
+    <h3>Villa</h3>
+    <br>
+    <div class="row">
+        <div class="col-sm-3" th:each="dichvu : ${listdichvu}">
+            <img src="/../static.images.villa1.png" class="img-responsive" style="width:100%" alt="Image"
+                 th:src="@{images/villa1.png}">
+            <h3 th:text="${dichvu.getTenDichVu()}"></h3>
+            <p th:text="${dichvu.getChiPhiThue()}"></p>
+            <p th:text="${dichvu.getDienTich()}"></p>
+            <p th:text="${dichvu.getSoNguoiToiDa()}"></p>
+            <p th:text="${dichvu.getSoTang}"></p>
+            <p th:text="${dichvu.getTrangThai}"></p>
+        </div>
+        <div class="col-sm-3">
+            <img src="/../static.images.villa1.png" class="img-responsive" style="width:100%" alt="Image"
+                 th:src="@{images/villa2.png}">
+            <p>Villa 102</p>
+            <p>110$</p>
+            <p> 30m2</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="/../static.images.villa1.png" class="img-responsive" style="width:100%" alt="Image"
+                 th:src="@{images/villa3.png}">
+            <p>Villa 103</p>
+            <p>115$</p>
+            <p> 30m2</p>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <img src="/../static.images.villa1.png" class="img-responsive" style="width:100%" alt="Image"
+             th:src="@{images/villa4.png}">
+        <p>Villa 104</p>
+        <p>120$</p>
+        <p> 35m2</p>
+    </div>
+</div>
+</body>
+</html>
